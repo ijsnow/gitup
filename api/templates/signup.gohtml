@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Simple Transactional Email</title>
+
+    {{template "styles"}}
+  </head>
+  <body class="">
+    <p>Hey there {{.Name}},</p>
+
+    <p>Thanks for signing up for Gitup!</p>
+
+    <p>
+      We're always adding useful new features, as well as continually improving
+      our existing offering. We'd love to hear from you with any ideas you have
+      for making Gitup an even better repository platform.
+    </p>
+
+    <p>
+      Before you get to working on your awesome project, you'll be asked for the following verification code:
+    </p>
+
+    <p class="code">{{.Code}}</p>
+
+    <p>
+      Happy hacking!
+    </P>
+
+    <p>
+      - The Gitup Team
+    </p>
+
+    <p>
+      --
+    </p>
+    <p>
+      You are receiving this email because you recently signed up
+      for Gitup, a powerful repository hosting platform.
+    </p>
+  </body>
+</html>

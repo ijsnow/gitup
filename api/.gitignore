@@ -1,0 +1,4 @@
+.env
+/vendor
+gin-bin
+**/.DS_Store

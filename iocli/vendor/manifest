@@ -1,0 +1,46 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/asaskevich/govalidator",
+			"repository": "https://github.com/asaskevich/govalidator",
+			"vcs": "git",
+			"revision": "2c14e1cca90af49b3b21fe2d7aaa8cc7f9da2ff8",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/chzyer/readline",
+			"repository": "https://github.com/chzyer/readline",
+			"vcs": "git",
+			"revision": "41eea22f717c616615e1e59aa06cf831f9901f35",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/fatih/color",
+			"repository": "https://github.com/fatih/color",
+			"vcs": "git",
+			"revision": "9131ab34cf20d2f6d83fdc67168a5430d1c7dc23",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/nbutton23/zxcvbn-go",
+			"repository": "https://github.com/nbutton23/zxcvbn-go",
+			"vcs": "git",
+			"revision": "a22cb81b2ecdde8b68e9ffb8824731cbf88e1de4",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "golang.org/x/sys/unix",
+			"repository": "https://go.googlesource.com/sys",
+			"vcs": "git",
+			"revision": "f3918c30c5c2cb527c0b071a27c35120a6c0719a",
+			"branch": "master",
+			"path": "/unix",
+			"notests": true
+		}
+	]
+}
