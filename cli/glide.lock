@@ -1,8 +1,0 @@
-hash: 1d2864ca94e28bbd2aa6017d2e33f47c53d1cacd38b0df0acffa35e71f0daa63
-updated: 2017-02-23T10:22:30.224741613-06:00
-imports:
-- name: github.com/fatih/color
-  version: 7824417a424b65227be8ac9b14d545a7f3e6c3f0
-- name: github.com/urfave/cli
-  version: 0bdeddeeb0f650497d603c4ad7b20cfe685682f6
-testImports: []
