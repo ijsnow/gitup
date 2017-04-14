@@ -2,9 +2,6 @@
 	"ImportPath": "github.com/ijsnow/gitup/api",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v75",
-	"Packages": [
-		"./..."
-	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/asaskevich/govalidator",
@@ -34,6 +31,34 @@
 		{
 			"ImportPath": "github.com/ijsnow/gittp",
 			"Rev": "928cc804e1beb3247f8b0c7191f5392ad7360d99"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/datastore",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/datastore/bolt",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/git",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/services/authentication",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/services/validate",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/types",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/utils/http",
+			"Rev": "f4ae0330c5f93234775df6cee0c24183496e8d30"
 		},
 		{
 			"ImportPath": "github.com/joho/godotenv",
