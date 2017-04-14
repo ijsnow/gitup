@@ -3,15 +3,13 @@ package repos
 import (
 	"errors"
 	"fmt"
-	"log"
 	"os"
-	"os/user"
-	"regexp"
 
 	"github.com/ijsnow/gitup/api/config"
 	"github.com/ijsnow/gitup/datastore"
 	"github.com/ijsnow/gitup/git"
 	"github.com/ijsnow/gitup/types"
+	"github.com/ijsnow/gitup/utils/fspaths"
 )
 
 var repoDir string
@@ -72,14 +70,7 @@ func GetRepoDir() string {
 }
 
 func init() {
-	usr, err := user.Current()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	re := regexp.MustCompile("~")
-
-	path := re.ReplaceAllLiteralString(config.App.RepoDir, usr.HomeDir)
+	path := fspaths.ExpandTildePath(config.App.RepoDir)
 
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		os.Mkdir(path, os.ModePerm)

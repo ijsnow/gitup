@@ -8,12 +8,13 @@ import (
 	"github.com/ijsnow/gitup/api/config"
 	"github.com/ijsnow/gitup/api/router"
 	"github.com/ijsnow/gitup/datastore"
+	"github.com/ijsnow/gitup/utils/fspaths"
 )
 
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 
-	if err := datastore.Connect(config.App.Database.Path); err != nil {
+	if err := datastore.Connect(fspaths.ExpandTildePath(config.App.Database.Path)); err != nil {
 		panic(err)
 	}
 
