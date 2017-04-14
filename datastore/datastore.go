@@ -11,6 +11,7 @@ type DataStore struct {
 
 	Users    *bolt.Users
 	Sessions *bolt.Sessions
+	Repos    *bolt.Repos
 }
 
 func initialDataStore(db *boltdb.DB) *DataStore {
@@ -27,6 +28,7 @@ func (ds *DataStore) NewDataStore() *DataStore {
 		db:       ds.db,
 		Users:    bolt.NewUsers(ds.db),
 		Sessions: bolt.NewSessions(ds.db),
+		Repos:    bolt.NewRepos(ds.db),
 	}
 }
 

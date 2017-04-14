@@ -2,7 +2,6 @@ package bolt
 
 import (
 	"errors"
-	"fmt"
 
 	boltdb "github.com/boltdb/bolt"
 	"gitup.io/isaac/gitup/services/authentication"
@@ -52,6 +51,25 @@ func (c *Users) CreateUser(newUser *types.User) (int, error) {
 	return newUser.ID, err
 }
 
+// GetUserByID gets a session by user ID
+func (c *Users) GetUserByID(id int, user *types.User) error {
+	return c.db.View(func(tx *boltdb.Tx) error {
+		b := tx.Bucket(keys.user)
+		k := itob(id)
+
+		u := &types.DBUser{}
+
+		err := decode(b.Get(k), u)
+		if err != nil {
+			return errors.New("Not found")
+		}
+
+		u.ToUser(user)
+
+		return nil
+	})
+}
+
 // GetUserByUname gets a user by username
 func (c *Users) GetUserByUname(user *types.User) error {
 	return c.db.View(func(tx *boltdb.Tx) error {
@@ -66,7 +84,6 @@ func (c *Users) GetUserByUname(user *types.User) error {
 			if user.Uname == u.Uname {
 				u.ToUser(user)
 				isExist = true
-				fmt.Println(2, u.PasswordHash)
 
 				break
 			}
@@ -77,7 +94,7 @@ func (c *Users) GetUserByUname(user *types.User) error {
 		}
 
 		if !isExist {
-			return errors.New("Not found")
+			return ErrNotFound
 		}
 
 		return err
@@ -101,10 +118,8 @@ func (c *Users) GetUserByLogin(login *types.LoginUser, user *types.User) error {
 		return err
 	}
 
-	fmt.Println("Found user", user.Uname, user.Email, 1, user.PasswordHash)
-
 	if !authentication.Authenticate(user, login) {
-		return errors.New("Not found")
+		return ErrNotFound
 	}
 
 	return nil

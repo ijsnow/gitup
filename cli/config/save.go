@@ -13,20 +13,18 @@ import (
 
 // UserConfig is used for saving an updated config
 type UserConfig struct {
-	Username string `json:"username"`
-	Email    string `json:"email"`
-	Host     string `json:"host"`
+	Uname string `json:"username"`
+	Email string `json:"email"`
+	Host  string `json:"host"`
 }
 
 // UserKeys is used for saving an updated config
 type UserKeys struct {
-	Token   string `json:"token"`
-	Key     string `json:"key"`
-	KeyPath string
+	Token string `json:"token"`
 }
 
 // SaveConfig is used to save an updated config
-func SaveConfig(uc UserConfig) error {
+func SaveConfig(uc UserConfig, override ...bool) error {
 	usr, err := user.Current()
 	if err != nil {
 		log.Fatal(err)
@@ -43,16 +41,18 @@ func SaveConfig(uc UserConfig) error {
 
 	getConfig()
 
+	isOverride := len(override) > 0
+
 	writeConfig := UserConfig{
-		Username: Username,
-		Email:    Email,
+		Uname: Uname,
+		Email: Email,
 	}
 
-	if uc.Username != "" {
-		writeConfig.Username = uc.Username
+	if uc.Uname != "" || isOverride {
+		writeConfig.Uname = uc.Uname
 	}
 
-	if uc.Email != "" {
+	if uc.Email != "" || isOverride {
 		writeConfig.Email = uc.Email
 	}
 
@@ -79,7 +79,7 @@ func SaveConfig(uc UserConfig) error {
 }
 
 // SaveKeys is used to save new keys
-func SaveKeys(uk UserKeys) error {
+func SaveKeys(uk UserKeys, override ...bool) error {
 	usr, err := user.Current()
 	if err != nil {
 		log.Fatal(err)
@@ -96,17 +96,14 @@ func SaveKeys(uk UserKeys) error {
 
 	getConfig()
 
+	isOverride := len(override) > 0
+
 	writeKeys := UserKeys{
 		Token: Token,
-		Key:   Key,
 	}
 
-	if uk.Token != "" {
+	if uk.Token != "" || isOverride {
 		writeKeys.Token = uk.Token
-	}
-
-	if uk.Key != "" {
-		writeKeys.Key = uk.Key
 	}
 
 	if data, err := json.MarshalIndent(writeKeys, "", "  "); err == nil {
@@ -119,6 +116,30 @@ func SaveKeys(uk UserKeys) error {
 		}
 	} else {
 		iocli.Error("Error saving config file: %s", err)
+		return err
+	}
+
+	return nil
+}
+
+// Logout logs out by deleting the user config
+func Logout() error {
+	keys := UserKeys{
+		Token: "",
+	}
+
+	err := SaveKeys(keys, true)
+	if err != nil {
+		return err
+	}
+
+	cnf := UserConfig{
+		Uname: "",
+		Email: "",
+	}
+
+	err = SaveConfig(cnf, true)
+	if err != nil {
 		return err
 	}
 

@@ -44,8 +44,8 @@ func Login() error {
 	}
 
 	cnf := config.UserConfig{
-		Username: u.Uname,
-		Email:    u.Email,
+		Uname: u.Uname,
+		Email: u.Email,
 	}
 
 	err = config.SaveConfig(cnf)

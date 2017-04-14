@@ -1,6 +1,8 @@
 package api
 
 import (
+	"fmt"
+
 	"gitup.io/isaac/gitup/types"
 )
 
@@ -13,6 +15,8 @@ type AuthResp struct {
 // Login attempts to log the user in
 func Login(user *types.User) (bool, AuthResp) {
 	resp := AuthResp{}
+
+	fmt.Println("api")
 
 	p := params{
 		"username": user.Uname,
@@ -49,4 +53,12 @@ func Signup(user *types.User) (bool, AuthResp) {
 	user.Email = resp.Email
 
 	return resp.Success, resp
+}
+
+// Logout destroys the session on the server
+func Logout() bool {
+	resp := AuthResp{}
+	authDelete("auth/logout", nil, &resp)
+
+	return resp.Success
 }

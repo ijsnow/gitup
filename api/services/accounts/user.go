@@ -50,3 +50,8 @@ func GetUserByLogin(login *types.LoginUser, user *types.User) error {
 func AuthenticateUser(user *types.User, login *types.LoginUser) bool {
 	return authentication.Authenticate(user, login)
 }
+
+// Logout destroys the session
+func Logout(session *types.Session) error {
+	return datastore.Store.Sessions.DestroySession(session.Token)
+}

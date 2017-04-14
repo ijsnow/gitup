@@ -8,8 +8,8 @@ import (
 )
 
 func currentUserAction(c *cli.Context) error {
-	if config.Username != "" {
-		iocli.Success("User %s is logged in", config.Username)
+	if config.Uname != "" {
+		iocli.Success("User %s is logged in", config.Uname)
 	} else {
 		iocli.Error("You are currently not logged in")
 		iocli.Info("Run `gitup login`")
@@ -27,5 +27,6 @@ var User = cli.Command{
 	Subcommands: []cli.Command{
 		Signup,
 		Login,
+		Logout,
 	},
 }

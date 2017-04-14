@@ -37,3 +37,16 @@ func Email(email string) bool {
 func Host(url string) bool {
 	return url != ""
 }
+
+// RepoName validates a repo name. It is the same as uname validation
+func RepoName(name string) bool {
+	isEndsWithGit := regexp.
+		MustCompile(".git$").
+		MatchString(name)
+
+	if isEndsWithGit {
+		return false
+	}
+
+	return Uname(name)
+}

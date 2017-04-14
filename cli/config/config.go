@@ -16,31 +16,24 @@ import (
 )
 
 var (
-	// Username is the current computer's username
-	Username string
+	// Uname is the current computer's username
+	Uname string
 	// Email is the current computers email associated with the account
 	Email string
 	// Host is the remote host's URL or IP
 	Host string
 
-	// UserID is the current user's ID in the gitup system
-	UserID string
-	// Key is the public key used to auth for ssh with gitup.io
-	Key string
 	// Token is the current user's token used for auth with gitup.io
 	Token string
-
-	// LatestAPIVersion saves the latest API version we have deployed
-	LatestAPIVersion = "v1"
 
 	configFilename = "config"
 	keysFilename   = ".keys"
 )
 
 type config struct {
-	Username string `json:"username"`
-	Email    string `json:"email"`
-	Host     string `json:"host"`
+	Uname string `json:"username"`
+	Email string `json:"email"`
+	Host  string `json:"host"`
 }
 
 type keys struct {
@@ -66,7 +59,7 @@ func getConfig() {
 		configData := config{}
 
 		if err = json.Unmarshal(data, &configData); err == nil {
-			Username = configData.Username
+			Uname = configData.Uname
 			Email = configData.Email
 			Host = configData.Host
 		}
@@ -77,7 +70,6 @@ func getConfig() {
 		keyData := keys{}
 
 		if err = json.Unmarshal(data, &keyData); err == nil {
-			Key = keyData.Key
 			Token = keyData.Token
 		}
 	}
@@ -128,8 +120,8 @@ func RequireHost(action func(*cli.Context) error) func(*cli.Context) error {
 			}
 
 			cfg := UserConfig{Host: host}
-			SaveConfig(cfg)
 			Host = host
+			SaveConfig(cfg)
 		}
 
 		return action(c)
@@ -146,4 +138,25 @@ func checkHost(host string) bool {
 	}
 
 	return resp.StatusCode == http.StatusOK
+}
+
+// RequireAuth is a middleware to make sure you are logged in
+func RequireAuth(action func(*cli.Context) error) func(*cli.Context) error {
+	return func(c *cli.Context) error {
+		getConfig()
+
+		if Token == "" {
+			iocli.Error("You must be logged in to do this action")
+			iocli.Error("Run `gitup login` to log in or ")
+			iocli.Error("run `gitup signup` to create an account")
+
+			return nil
+		}
+
+		reqHost := RequireHost(func(cl *cli.Context) error {
+			return action(cl)
+		})
+
+		return reqHost(c)
+	}
 }

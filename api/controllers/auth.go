@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"gitup.io/isaac/gitup/api/services/accounts"
+	"gitup.io/isaac/gitup/api/services/middlewares"
 	"gitup.io/isaac/gitup/api/services/repos"
 	"gitup.io/isaac/gitup/api/services/sessions"
 	"gitup.io/isaac/gitup/types"
@@ -90,10 +91,23 @@ func (c *Auth) CreateUser(w http.ResponseWriter, req *http.Request) (int, interf
 		return httputils.InternalError()
 	}
 
-	err = repos.CreateUserRepoDirectory(user.Uname)
+	err = repos.ProvisionRepos(&user)
 	if err != nil {
 		return httputils.InternalError()
 	}
 
 	return http.StatusCreated, map[string]interface{}{"token": user.Token}
+}
+
+// Logout logs the user out by destroying the session
+func (c *Auth) Logout(w http.ResponseWriter, req *http.Request) (int, interface{}) {
+	sctx := req.Context().Value(middlewares.SessionKey)
+	session, ok := sctx.(*types.Session)
+	if !ok {
+		return httputils.InternalError()
+	}
+
+	accounts.Logout(session)
+
+	return http.StatusOK, nil
 }

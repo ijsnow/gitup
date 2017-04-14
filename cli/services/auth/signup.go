@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"gitup.io/isaac/gitup/cli/api"
+	"gitup.io/isaac/gitup/cli/config"
 	"gitup.io/isaac/gitup/iocli"
 	"gitup.io/isaac/gitup/types"
 )
@@ -47,6 +48,25 @@ func Signup(u *types.User) error {
 		} else {
 			requestSuccess = true
 		}
+	}
+
+	keys := config.UserKeys{
+		Token: u.Token,
+	}
+
+	err := config.SaveKeys(keys)
+	if err != nil {
+		iocli.Error("Error creating local session")
+	}
+
+	cnf := config.UserConfig{
+		Uname: u.Uname,
+		Email: u.Email,
+	}
+
+	err = config.SaveConfig(cnf)
+	if err != nil {
+		iocli.Error("Error creating local session")
 	}
 
 	iocli.Success("Successfully signed up!")

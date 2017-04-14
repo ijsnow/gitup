@@ -1,16 +1,15 @@
 package router
 
 import (
-	"github.com/gorilla/mux"
+	"net/http"
+
+	"github.com/ijsnow/gittp"
 	"gitup.io/isaac/gitup/api/controllers"
-	httputils "gitup.io/isaac/gitup/utils/http"
+	"gitup.io/isaac/gitup/api/services/repos"
 )
 
-func setGitRoutes(router *mux.Router) {
+func getGitHandler() http.Handler {
 	ctl := controllers.NewGitController()
-	sub := router.PathPrefix("/core/").Subrouter()
 
-	sub.Handle("/", httputils.
-		NewHandler(ctl.GetRepo)).
-		Methods("GET")
+	return gittp.NewHandler(repos.GetRepoDir(), ctl.ServeRepo)
 }

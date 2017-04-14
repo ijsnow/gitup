@@ -12,16 +12,19 @@ import (
 // It implements the http.Handler interface
 type Handler struct {
 	handlerFunc HandlerFunc
-	middlewares []HandlerFunc
+	middlewares []Middleware
 }
 
 // HandlerFunc is what handles the requests.
 // It returns the response code and the data we are sending
 type HandlerFunc func(http.ResponseWriter, *http.Request) (int, interface{})
 
+// Middleware is the type for middlewares
+type Middleware func(*http.Request) (*http.Request, int, interface{})
+
 // NewHandler creates a new Handler
 func NewHandler(handle HandlerFunc) Handler {
-	return Handler{handle, make([]HandlerFunc, 0)}
+	return Handler{handle, make([]Middleware, 0)}
 }
 
 func (h Handler) ServeHTTP(res http.ResponseWriter, req *http.Request) {
@@ -30,7 +33,7 @@ func (h Handler) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 	var err interface{}
 
 	for _, mw := range h.middlewares {
-		code, err = mw(res, req)
+		req, code, err = mw(req)
 
 		if err != nil {
 			break
@@ -47,7 +50,7 @@ func (h Handler) ServeHTTP(res http.ResponseWriter, req *http.Request) {
 }
 
 // UseMiddlewares applies one or more middlewares for a HandlerFunc
-func (h Handler) UseMiddlewares(middlewares ...HandlerFunc) Handler {
+func (h Handler) UseMiddlewares(middlewares ...Middleware) Handler {
 	h.middlewares = middlewares
 
 	return h

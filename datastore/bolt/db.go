@@ -5,6 +5,12 @@ import (
 	"encoding/binary"
 	"encoding/gob"
 	"encoding/json"
+	"errors"
+)
+
+var (
+	// ErrNotFound is the error to represent something not being found in the DB
+	ErrNotFound = errors.New("Not Found")
 )
 
 type dbKeys struct {
