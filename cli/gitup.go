@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	"gitup.io/isaac/gitup/cli/actions/core"
-	"gitup.io/isaac/gitup/cli/actions/host"
-	"gitup.io/isaac/gitup/cli/actions/repo"
-	"gitup.io/isaac/gitup/cli/actions/user"
+	"github.com/ijsnow/gitup/cli/actions/core"
+	"github.com/ijsnow/gitup/cli/actions/host"
+	"github.com/ijsnow/gitup/cli/actions/repo"
+	"github.com/ijsnow/gitup/cli/actions/user"
 
 	"github.com/urfave/cli"
 )

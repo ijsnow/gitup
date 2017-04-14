@@ -1,5 +1,5 @@
 {
-	"ImportPath": "gitup.io/isaac/gitup/api",
+	"ImportPath": "github.com/ijsnow/gitup/api",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v75",
 	"Packages": [
@@ -41,31 +41,31 @@
 			"Rev": "4ed13390c0acd2ff4e371e64d8b97c8954138243"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/datastore",
+			"ImportPath": "github.com/ijsnow/gitup/datastore",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/datastore/bolt",
+			"ImportPath": "github.com/ijsnow/gitup/datastore/bolt",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/git",
+			"ImportPath": "github.com/ijsnow/gitup/git",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/services/authentication",
+			"ImportPath": "github.com/ijsnow/gitup/services/authentication",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/services/validate",
+			"ImportPath": "github.com/ijsnow/gitup/services/validate",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/types",
+			"ImportPath": "github.com/ijsnow/gitup/types",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/utils/http",
+			"ImportPath": "github.com/ijsnow/gitup/utils/http",
 			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
 		},
 		{

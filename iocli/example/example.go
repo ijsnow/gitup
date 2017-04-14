@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/urfave/cli"
-	"gitup.io/isaac/gitup/iocli"
+	"github.com/ijsnow/gitup/iocli"
 )
 
 func unameAction(c *cli.Context) error {

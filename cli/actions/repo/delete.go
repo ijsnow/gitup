@@ -2,9 +2,9 @@ package repo
 
 import (
 	"github.com/urfave/cli"
-	"gitup.io/isaac/gitup/cli/config"
-	"gitup.io/isaac/gitup/cli/services/repos"
-	"gitup.io/isaac/gitup/cli/utils"
+	"github.com/ijsnow/gitup/cli/config"
+	"github.com/ijsnow/gitup/cli/services/repos"
+	"github.com/ijsnow/gitup/cli/utils"
 )
 
 func deleteRepoAction(c *cli.Context) error {

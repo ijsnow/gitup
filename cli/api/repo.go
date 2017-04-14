@@ -1,6 +1,6 @@
 package api
 
-import "gitup.io/isaac/gitup/types"
+import "github.com/ijsnow/gitup/types"
 
 // RepoResp is the response type for a repo endpoint
 type RepoResp struct {

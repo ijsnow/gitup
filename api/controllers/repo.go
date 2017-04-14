@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitup.io/isaac/gitup/api/services/middlewares"
-	"gitup.io/isaac/gitup/api/services/repos"
-	"gitup.io/isaac/gitup/types"
-	httputils "gitup.io/isaac/gitup/utils/http"
+	"github.com/ijsnow/gitup/api/services/middlewares"
+	"github.com/ijsnow/gitup/api/services/repos"
+	"github.com/ijsnow/gitup/types"
+	httputils "github.com/ijsnow/gitup/utils/http"
 )
 
 // Repo is the controller for managing remote repos

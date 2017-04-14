@@ -5,9 +5,9 @@ import (
 	"strconv"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"gitup.io/isaac/gitup/api/config"
-	"gitup.io/isaac/gitup/services/authentication"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/api/config"
+	"github.com/ijsnow/gitup/services/authentication"
+	"github.com/ijsnow/gitup/types"
 
 	boltdb "github.com/boltdb/bolt"
 )

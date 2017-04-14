@@ -4,8 +4,8 @@ import (
 	"errors"
 
 	boltdb "github.com/boltdb/bolt"
-	"gitup.io/isaac/gitup/services/authentication"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/services/authentication"
+	"github.com/ijsnow/gitup/types"
 )
 
 // Users is the structure for managing the users in the db

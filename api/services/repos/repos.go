@@ -8,10 +8,10 @@ import (
 	"os/user"
 	"regexp"
 
-	"gitup.io/isaac/gitup/api/config"
-	"gitup.io/isaac/gitup/datastore"
-	"gitup.io/isaac/gitup/git"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/api/config"
+	"github.com/ijsnow/gitup/datastore"
+	"github.com/ijsnow/gitup/git"
+	"github.com/ijsnow/gitup/types"
 )
 
 var repoDir string

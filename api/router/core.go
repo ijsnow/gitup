@@ -2,8 +2,8 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"gitup.io/isaac/gitup/api/controllers"
-	httputils "gitup.io/isaac/gitup/utils/http"
+	"github.com/ijsnow/gitup/api/controllers"
+	httputils "github.com/ijsnow/gitup/utils/http"
 )
 
 func setCoreRoutes(router *mux.Router) {

@@ -3,8 +3,8 @@ package sessions
 import (
 	"errors"
 
-	"gitup.io/isaac/gitup/datastore"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/datastore"
+	"github.com/ijsnow/gitup/types"
 )
 
 // CreateSession creates a new session for the user

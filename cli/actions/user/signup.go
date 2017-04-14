@@ -2,10 +2,10 @@ package user
 
 import (
 	"github.com/urfave/cli"
-	"gitup.io/isaac/gitup/cli/config"
-	"gitup.io/isaac/gitup/cli/services/auth"
-	"gitup.io/isaac/gitup/cli/utils"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/cli/config"
+	"github.com/ijsnow/gitup/cli/services/auth"
+	"github.com/ijsnow/gitup/cli/utils"
+	"github.com/ijsnow/gitup/types"
 )
 
 func signupAction(c *cli.Context) error {

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/ijsnow/gittp"
-	"gitup.io/isaac/gitup/api/controllers"
-	"gitup.io/isaac/gitup/api/services/repos"
+	"github.com/ijsnow/gitup/api/controllers"
+	"github.com/ijsnow/gitup/api/services/repos"
 )
 
 func getGitHandler() http.Handler {

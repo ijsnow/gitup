@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"gitup.io/isaac/gitup/services/validate"
+	"github.com/ijsnow/gitup/services/validate"
 
 	"github.com/chzyer/readline"
 )

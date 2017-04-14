@@ -1,5 +1,5 @@
 {
-	"ImportPath": "gitup.io/isaac/gitup/cli",
+	"ImportPath": "github.com/ijsnow/gitup/cli",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v75",
 	"Packages": [
@@ -37,15 +37,15 @@
 			"Rev": "347a9884a87374d000eec7e6445a34487c1f4a2b"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/iocli",
+			"ImportPath": "github.com/ijsnow/gitup/iocli",
 			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/services/validate",
+			"ImportPath": "github.com/ijsnow/gitup/services/validate",
 			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
 		},
 		{
-			"ImportPath": "gitup.io/isaac/gitup/types",
+			"ImportPath": "github.com/ijsnow/gitup/types",
 			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
 		},
 		{

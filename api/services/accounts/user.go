@@ -3,9 +3,9 @@ package accounts
 import (
 	"errors"
 
-	"gitup.io/isaac/gitup/datastore"
-	"gitup.io/isaac/gitup/services/authentication"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/datastore"
+	"github.com/ijsnow/gitup/services/authentication"
+	"github.com/ijsnow/gitup/types"
 )
 
 // ValidateUser validate the user

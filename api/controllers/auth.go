@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"gitup.io/isaac/gitup/api/services/accounts"
-	"gitup.io/isaac/gitup/api/services/middlewares"
-	"gitup.io/isaac/gitup/api/services/repos"
-	"gitup.io/isaac/gitup/api/services/sessions"
-	"gitup.io/isaac/gitup/types"
-	httputils "gitup.io/isaac/gitup/utils/http"
+	"github.com/ijsnow/gitup/api/services/accounts"
+	"github.com/ijsnow/gitup/api/services/middlewares"
+	"github.com/ijsnow/gitup/api/services/repos"
+	"github.com/ijsnow/gitup/api/services/sessions"
+	"github.com/ijsnow/gitup/types"
+	httputils "github.com/ijsnow/gitup/utils/http"
 )
 
 // Auth is the controller for authentication routes

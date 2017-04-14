@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/urfave/cli"
-	"gitup.io/isaac/gitup/iocli"
+	"github.com/ijsnow/gitup/iocli"
 )
 
 // CreateAction wraps an action

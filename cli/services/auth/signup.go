@@ -3,10 +3,10 @@ package auth
 import (
 	"net/http"
 
-	"gitup.io/isaac/gitup/cli/api"
-	"gitup.io/isaac/gitup/cli/config"
-	"gitup.io/isaac/gitup/iocli"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/cli/api"
+	"github.com/ijsnow/gitup/cli/config"
+	"github.com/ijsnow/gitup/iocli"
+	"github.com/ijsnow/gitup/types"
 )
 
 // Signup signs a user up

@@ -2,9 +2,9 @@ package user
 
 import (
 	"github.com/urfave/cli"
-	"gitup.io/isaac/gitup/cli/config"
-	"gitup.io/isaac/gitup/cli/utils"
-	"gitup.io/isaac/gitup/iocli"
+	"github.com/ijsnow/gitup/cli/config"
+	"github.com/ijsnow/gitup/cli/utils"
+	"github.com/ijsnow/gitup/iocli"
 )
 
 func currentUserAction(c *cli.Context) error {

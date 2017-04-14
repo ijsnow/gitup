@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	boltdb "github.com/boltdb/bolt"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/types"
 )
 
 // Repos is the structure for managing the repos in the db

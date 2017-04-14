@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os/user"
 
-	git "gitup.io/isaac/gitup/git"
+	git "github.com/ijsnow/gitup/git"
 )
 
 func main() {

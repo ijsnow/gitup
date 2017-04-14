@@ -10,7 +10,7 @@ import (
 	"os/user"
 	"time"
 
-	"gitup.io/isaac/gitup/iocli"
+	"github.com/ijsnow/gitup/iocli"
 
 	"github.com/urfave/cli"
 )

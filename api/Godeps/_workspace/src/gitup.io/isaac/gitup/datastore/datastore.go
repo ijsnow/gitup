@@ -2,7 +2,7 @@ package datastore
 
 import (
 	boltdb "github.com/boltdb/bolt"
-	"gitup.io/isaac/gitup/datastore/bolt"
+	"github.com/ijsnow/gitup/datastore/bolt"
 )
 
 // DataStore is the type for a database session

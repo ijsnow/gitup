@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"gitup.io/isaac/gitup/datastore"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/datastore"
+	"github.com/ijsnow/gitup/types"
 )
 
 type key string

@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/user"
 
-	"gitup.io/isaac/gitup/iocli"
+	"github.com/ijsnow/gitup/iocli"
 )
 
 // UserConfig is used for saving an updated config

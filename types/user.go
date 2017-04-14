@@ -3,7 +3,7 @@ package types
 import (
 	"time"
 
-	"gitup.io/isaac/gitup/services/validate"
+	"github.com/ijsnow/gitup/services/validate"
 
 	"github.com/asaskevich/govalidator"
 )

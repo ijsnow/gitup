@@ -2,9 +2,9 @@ package router
 
 import (
 	"github.com/gorilla/mux"
-	"gitup.io/isaac/gitup/api/controllers"
-	"gitup.io/isaac/gitup/api/services/middlewares"
-	httputils "gitup.io/isaac/gitup/utils/http"
+	"github.com/ijsnow/gitup/api/controllers"
+	"github.com/ijsnow/gitup/api/services/middlewares"
+	httputils "github.com/ijsnow/gitup/utils/http"
 )
 
 func setAuthRoutes(router *mux.Router) {

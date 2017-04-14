@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"gitup.io/isaac/gitup/api/config"
-	"gitup.io/isaac/gitup/api/router"
-	"gitup.io/isaac/gitup/datastore"
+	"github.com/ijsnow/gitup/api/config"
+	"github.com/ijsnow/gitup/api/router"
+	"github.com/ijsnow/gitup/datastore"
 )
 
 func main() {

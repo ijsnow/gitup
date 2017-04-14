@@ -4,8 +4,8 @@ import (
 	"time"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"gitup.io/isaac/gitup/api/config"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/api/config"
+	"github.com/ijsnow/gitup/types"
 	"golang.org/x/crypto/bcrypt"
 )
 

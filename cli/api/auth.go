@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/types"
 )
 
 // AuthResp is the response type for a authentication endpoint

@@ -3,9 +3,9 @@ package controllers
 import (
 	"net/http"
 
-	"gitup.io/isaac/gitup/api/services/accounts"
-	"gitup.io/isaac/gitup/api/services/repos"
-	"gitup.io/isaac/gitup/types"
+	"github.com/ijsnow/gitup/api/services/accounts"
+	"github.com/ijsnow/gitup/api/services/repos"
+	"github.com/ijsnow/gitup/types"
 
 	"github.com/ijsnow/gittp"
 )

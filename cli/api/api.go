@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"time"
 
-	"gitup.io/isaac/gitup/cli/config"
+	"github.com/ijsnow/gitup/cli/config"
 )
 
 var client = http.Client{Timeout: 10 * time.Second}
