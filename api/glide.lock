@@ -1,0 +1,42 @@
+hash: 1fa78355fdb9d399d691a609c392eba0c84b2fd4a623389c65fde8ac0393f0ff
+updated: 2017-04-14T17:09:41.726034548-05:00
+imports:
+- name: github.com/asaskevich/govalidator
+  version: fdf19785fd3558d619ef81212f5edf1d6c2a5911
+- name: github.com/boltdb/bolt
+  version: e9cf4fae01b5a8ff89d0ec6b32f0d9c9f79aefdd
+- name: github.com/dgrijalva/jwt-go
+  version: 63734eae1ef55eaac06fdc0f312615f2e321e273
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/handlers
+  version: a5775781a543af3c6b9f5baf10995e4d14168950
+- name: github.com/gorilla/mux
+  version: 757bef944d0f21880861c2dd9c871ca543023cba
+- name: github.com/ijsnow/gittp
+  version: 928cc804e1beb3247f8b0c7191f5392ad7360d99
+- name: github.com/ijsnow/gitup
+  version: f4ae0330c5f93234775df6cee0c24183496e8d30
+  subpackages:
+  - api/config
+  - datastore
+  - datastore/bolt
+  - git
+  - services/authentication
+  - services/validate
+  - types
+  - utils/http
+- name: github.com/joho/godotenv
+  version: 4ed13390c0acd2ff4e371e64d8b97c8954138243
+- name: golang.org/x/crypto
+  version: e0d166c33c321d0ff863f459a5882096e334f508
+  subpackages:
+  - bcrypt
+  - blowfish
+- name: golang.org/x/sys
+  version: f3918c30c5c2cb527c0b071a27c35120a6c0719a
+  subpackages:
+  - unix
+- name: gopkg.in/libgit2/git2go.v25
+  version: 334260d743d713a55ff3c097ec6707f2bb39e9d5
+testImports: []

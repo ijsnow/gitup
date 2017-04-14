@@ -1,0 +1,53 @@
+{
+	"ImportPath": "github.com/ijsnow/gitup/cli",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v75",
+	"Deps": [
+		{
+			"ImportPath": "github.com/asaskevich/govalidator",
+			"Comment": "v5-20-gfdf1978",
+			"Rev": "fdf19785fd3558d619ef81212f5edf1d6c2a5911"
+		},
+		{
+			"ImportPath": "github.com/chzyer/readline",
+			"Comment": "v1.4-24-g41eea22",
+			"Rev": "41eea22f717c616615e1e59aa06cf831f9901f35"
+		},
+		{
+			"ImportPath": "github.com/fatih/color",
+			"Comment": "v1.4.1",
+			"Rev": "9131ab34cf20d2f6d83fdc67168a5430d1c7dc23"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/iocli",
+			"Rev": "f6d9d559174428ea204c26d7f0297c3790b1a504"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/services/validate",
+			"Rev": "f6d9d559174428ea204c26d7f0297c3790b1a504"
+		},
+		{
+			"ImportPath": "github.com/ijsnow/gitup/types",
+			"Rev": "f6d9d559174428ea204c26d7f0297c3790b1a504"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Comment": "v0.0.7-24-gded68f7",
+			"Rev": "ded68f7a9561c023e790de24279db7ebf473ea80"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-isatty",
+			"Comment": "v0.0.2",
+			"Rev": "fc9e8d8ef48496124e79ae0df75490096eccf6fe"
+		},
+		{
+			"ImportPath": "github.com/urfave/cli",
+			"Comment": "v1.19.1-21-g347a988",
+			"Rev": "347a9884a87374d000eec7e6445a34487c1f4a2b"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "f3918c30c5c2cb527c0b071a27c35120a6c0719a"
+		}
+	]
+}

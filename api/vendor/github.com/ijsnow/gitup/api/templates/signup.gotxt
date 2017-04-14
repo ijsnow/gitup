@@ -1,0 +1,19 @@
+Hey there {{.Name}},
+
+Thanks for signing up for Gitup!
+
+We're always adding useful new features, as well as continually improving
+our existing offering. We'd love to hear from you with any ideas you have
+for making Gitup an even better repository platform.
+
+Before you get to working on your awesome project, you'll be asked for the following verification code:
+
+<p style="font-size: 16px;">{{.Code}}</p>
+
+Happy hacking!
+
+- The Gitup Team
+
+--
+You are receiving this email because you recently signed up
+for Gitup, a powerful repository hosting platform.

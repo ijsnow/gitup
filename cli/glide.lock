@@ -1,0 +1,26 @@
+hash: 0919164706242b6203fb22cd93726bd56872c58ba813033390b966e753f7be04
+updated: 2017-04-14T17:09:48.313158161-05:00
+imports:
+- name: github.com/asaskevich/govalidator
+  version: fdf19785fd3558d619ef81212f5edf1d6c2a5911
+- name: github.com/chzyer/readline
+  version: 41eea22f717c616615e1e59aa06cf831f9901f35
+- name: github.com/fatih/color
+  version: 9131ab34cf20d2f6d83fdc67168a5430d1c7dc23
+- name: github.com/ijsnow/gitup
+  version: f6d9d559174428ea204c26d7f0297c3790b1a504
+  subpackages:
+  - iocli
+  - services/validate
+  - types
+- name: github.com/mattn/go-colorable
+  version: ded68f7a9561c023e790de24279db7ebf473ea80
+- name: github.com/mattn/go-isatty
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/urfave/cli
+  version: 347a9884a87374d000eec7e6445a34487c1f4a2b
+- name: golang.org/x/sys
+  version: f3918c30c5c2cb527c0b071a27c35120a6c0719a
+  subpackages:
+  - unix
+testImports: []

@@ -1,3 +1,4 @@
 cli/gitup
 api/gin-bin
-.DS_Store
+api/.env
+**/.DS_Store
