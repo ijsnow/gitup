@@ -41,34 +41,6 @@
 			"Rev": "4ed13390c0acd2ff4e371e64d8b97c8954138243"
 		},
 		{
-			"ImportPath": "github.com/ijsnow/gitup/datastore",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/datastore/bolt",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/git",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/services/authentication",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/services/validate",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/types",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/utils/http",
-			"Rev": "3fff13ff7865d92265b540beef82db23a4534842"
-		},
-		{
 			"ImportPath": "golang.org/x/crypto/bcrypt",
 			"Rev": "e0d166c33c321d0ff863f459a5882096e334f508"
 		},

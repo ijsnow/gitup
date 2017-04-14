@@ -37,18 +37,6 @@
 			"Rev": "347a9884a87374d000eec7e6445a34487c1f4a2b"
 		},
 		{
-			"ImportPath": "github.com/ijsnow/gitup/iocli",
-			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/services/validate",
-			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
-		},
-		{
-			"ImportPath": "github.com/ijsnow/gitup/types",
-			"Rev": "e404e27954c6b99a834b9fba68c2a2eb01efe0f7"
-		},
-		{
 			"ImportPath": "golang.org/x/sys/unix",
 			"Rev": "f3918c30c5c2cb527c0b071a27c35120a6c0719a"
 		}
